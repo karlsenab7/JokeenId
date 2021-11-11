@@ -1,1 +1,27 @@
 <!-- this file is for sequence -->
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+        <!-- Sequences for hospital patient -->
+        <!-- <record id="sequence_hospital_patient" model="ir.sequence">
+            <field name="name">Patient Sequence</field>
+            <field name="code">hospital.patient.sequence</field>
+            <field name="prefix">HP</field>
+            <field name="padding">5</field>
+            <field eval="False" name="company_id"/>
+        </record> -->
+
+        <!-- Sequences for Jokeen Categories -->
+        <!-- <record id="sequence_jokeen_transactions_categories" model="ir.sequence">
+            <field name="name">Categories Sequence</field>
+            <field name="code">jokeen.transactions.categories.sequence</field>
+            <field name="prefix">CG</field>
+            <field name="padding">5</field>
+            <field eval="False" name="company_id"/>
+        </record> -->
+
+    </data>
+    
+
+</odoo>

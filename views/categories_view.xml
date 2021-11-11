@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- page view type -->
+    <record id="view_categories_tree" model="ir.ui.view">
+        <field name="name">jokeen.transactions.categories.tree</field>
+        <field name="model">jokeen.transactions.categories</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_categories_form" model="ir.ui.view">
+        <field name="name">jokeen.transactions.categories.form</field>
+        <field name="model">jokeen.transactions.categories</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <!-- end of page view type -->
+
+    <!-- action (ketika ditekan apa yg dilakukan) -->
+    <record id="action_categories" model="ir.actions.act_window">
+        <field name="name">Categories</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">jokeen.transactions.categories</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <!-- <field name="context">{'search_default_responsible_id': 1, 'search_default_male': 1}</field> -->
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                create your first category!
+            </p>
+        </field>
+    </record>
+    <!-- end of action -->
+
+    <!-- controller -->
+    <menuitem
+        id="menu_jokeen_root"
+        name="Jokeen"
+        sequence="10"/>
+
+    <menuitem
+        id="menu_jokeen_categories_root"
+        name="Categories"
+        parent="menu_jokeen_root"
+        sequence="10"/>
+
+    <menuitem
+        id="menu_jokeen_categories"
+        name="Categories"
+        parent="menu_jokeen_categories_root"
+        action="action_categories"
+        sequence="10"/>
+
+    <!-- end of controller -->
+</odoo>

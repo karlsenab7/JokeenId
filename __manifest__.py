@@ -10,7 +10,7 @@
     'depends' : ['sale', 'mail'],
     'data': [
         'security/ir.model.access.csv',
-        # 'data/data.xml',
+        'data/data.xml',
         'views/categories_view.xml',
     ],
     'demo': [],

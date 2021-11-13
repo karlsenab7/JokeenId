@@ -12,6 +12,7 @@
         'security/ir.model.access.csv',
         'data/data.xml',
         'views/categories_view.xml',
+        'views/transactions_view.xml',
     ],
     'demo': [],
     'qweb': [],

@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_jokeen_transactions_categories,access.jokeen.transactions.categories,model_jokeen_transactions_categories,,1,1,1,1
+access_jokeen_transactions,access.jokeen.transactions,model_jokeen_transactions,,1,1,1,1

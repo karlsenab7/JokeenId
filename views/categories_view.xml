@@ -7,9 +7,9 @@
         <field name="model">jokeen.transactions.categories</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="reference"/>
-                <field name="name"/>
-                <field name="note"/>
+                <field name="reference" optional="show"/>
+                <field name="name" optional="show"/>
+                <field name="note" optional="show"/>
             </tree>
         </field>
     </record>

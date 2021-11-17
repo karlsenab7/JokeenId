@@ -66,6 +66,21 @@
             </kanban>
         </field>
     </record>
+
+    <!-- filter -->
+    <record id="view_categories_search" model="ir.ui.view">
+        <field name="name">jokeen.transactions.categories.search</field>
+        <field name="model">jokeen.transactions.categories</field>
+        <field name="arch" type="xml">
+            <search string="Categories">
+                <field name="name"/>
+                <field name="note"/>
+                <separator/>
+                <filter string="Income" name="income" domain="[('transType', '=', 'income')]"/>
+                <filter string="Expenditure" name="expenditure" domain="[('transType', '=', 'expenditure')]"/>
+            </search>
+        </field>
+    </record>
     <!-- end of page view type -->
 
     <!-- action (ketika ditekan apa yg dilakukan) -->

@@ -8,6 +8,10 @@ class Categories(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
     reference = fields.Char(string='Reference', required=True, copy=False, readonly=True, default=lambda self: _('New'))
+    transType = fields.Selection([
+            ('income', 'Income'),
+            ('expenditure', 'Expenditure'),
+        ], string='Type', default='expenditure', required=True)
     name = fields.Char(string='Category', required=True)
     note = fields.Text(string='Description')
 

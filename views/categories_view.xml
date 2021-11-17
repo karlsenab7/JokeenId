@@ -8,6 +8,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="reference" optional="show"/>
+                <field name="transType" optional="show"/>
                 <field name="name" optional="show"/>
                 <field name="note" optional="show"/>
             </tree>
@@ -26,6 +27,7 @@
                         </h1>
                     </div>
                     <group>
+                        <field name="transType"/>
                         <field name="name"/>
                         <field name="note"/>
                     </group>
@@ -53,6 +55,7 @@
                             <div class="oe_kanban_details">
                                 <ul>
                                     <li>Reference   : <field name="reference"/></li>
+                                    <li>Type   : <field name="transType"/></li>
                                     <li>Name    : <field name="name"/></li>
                                     <li>Note    : <field name="note"/></li>
                                 </ul>

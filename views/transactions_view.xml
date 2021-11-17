@@ -31,7 +31,7 @@
                     <group>
                         <group>
                             <field name="transType"/>
-                            <field name="category"/>
+                            <field name="category" domain="[('transType', '=', transType)]"/>
                         </group>
                         <group>
                             <field name="transDate"/>
@@ -99,6 +99,17 @@
             </search>
         </field>
     </record>
+    <record id="view_transactions_graph" model="ir.ui.view" >
+            <field name="name">jokeen.transactions.graph</field>
+            <field name="model">jokeen.transactions</field>
+            <field name="arch" type="xml">
+                <graph string="Jokeen's Transactions" sample="1">
+                    <field name="category"/>
+                    <field name="transType"/>
+                    <field name="nominal" type="measure"/>
+                </graph> 
+            </field>
+        </record>
     <!-- end of page view type -->
 
     <!-- action (ketika ditekan apa yg dilakukan) -->

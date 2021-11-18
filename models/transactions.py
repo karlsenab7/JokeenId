@@ -15,9 +15,9 @@ class Transactions(models.Model):
         ], string='Type', default='expenditure', required=True)
     category = fields.Many2one(comodel_name="jokeen.transactions.categories", string="Category", required=True)
     
-    transDate = fields.Date(string="Date", required=True)
-    nominal = fields.Integer(string='Nominal', required=True)
-    note = fields.Text(string='Description')
+    transDate = fields.Date(string="Date", required=True, track_visibility='onchange')
+    nominal = fields.Integer(string='Nominal', required=True, track_visibility='onchange')
+    note = fields.Text(string='Description', track_visibility='onchange')
 
     @api.model
     def create(self, vals):

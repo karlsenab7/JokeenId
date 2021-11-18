@@ -88,6 +88,10 @@
         <field name="arch" type="xml">
             <search string="Transactions">
                 <field name="name"/>
+                <field name="transType"/>
+                <field name="category"/>
+                <field name="transDate"/>
+                <field name="nominal"/>
                 <field name="note"/>
                 <separator/>
                 <filter string="Income" name="income" domain="[('transType', '=', 'income')]"/>

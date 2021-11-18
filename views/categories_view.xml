@@ -73,6 +73,8 @@
         <field name="model">jokeen.transactions.categories</field>
         <field name="arch" type="xml">
             <search string="Categories">
+                <field name="reference"/>
+                <field name="transType"/>
                 <field name="name"/>
                 <field name="note"/>
                 <separator/>

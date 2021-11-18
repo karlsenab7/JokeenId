@@ -80,6 +80,9 @@
                 <separator/>
                 <filter string="Income" name="income" domain="[('transType', '=', 'income')]"/>
                 <filter string="Expenditure" name="expenditure" domain="[('transType', '=', 'expenditure')]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Type" name="transType" context="{'group_by' : 'transType'}"/>
+                </group>
             </search>
         </field>
     </record>
